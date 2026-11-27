@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="IBRASCRIPT - katalog file dan unduhan">
+  <title>IBRASCRIPT — Download Center</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="topbar">
+    <a class="brand" href="/">IBRA<span>SCRIPT</span><i>✦</i></a>
+    <button id="themeBtn" class="icon-btn" aria-label="Ganti tema">☾</button>
+  </header>
+  <main class="shell">
+    <div class="eyebrow">⚡ DIGITAL FILE SYSTEM ⚡</div>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="tag">WELCOME TO</p>
+        <h1>IBRA<span>SCRIPT</span></h1>
+        <p class="sub">Temukan file, tools, dan koleksi digital dalam satu tempat.</p>
+        <div class="hero-stats"><span><b id="totalFiles">0</b> FILE TERSEDIA</span><span>•</span><span>DOWNLOAD CENTER</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit"></div><div class="big-mark">IS</div><div class="art-caption">DIGITAL ARCHIVE / 001</div></div>
+    </section>
+
+    <section class="content">
+      <div class="section-head"><div><p class="tag">FILE DIRECTORY</p><h2>Daftar File</h2></div><button id="adminOpen" class="admin-link">ADMIN LOGIN ↗</button></div>
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari file..." autocomplete="off"><kbd>SEARCH</kbd></label>
+      <div id="fileList" class="file-list"><div class="empty">Memuat daftar file...</div></div>
+      <p class="footnote">Unduh hanya file dari sumber yang kamu percaya. Periksa file sebelum membukanya.</p>
+    </section>
+    <footer>© <span id="year"></span> IBRASCRIPT <span class="muted">— DIGITAL FILE SYSTEM</span></footer>
+  </main>
+
+  <dialog id="adminDialog">
+    <form method="dialog" class="dialog-top"><div><p class="tag">CONTROL PANEL</p><h2>Admin Area</h2></div><button class="close" aria-label="Tutup">×</button></form>
+    <div id="loginPanel">
+      <label class="field-label">Password admin<input id="password" type="password" placeholder="Masukkan password"></label>
+      <button id="loginBtn" class="primary">LOGIN</button>
+    </div>
+    <div id="uploadPanel" hidden>
+      <p class="admin-note">Format yang diizinkan: ZIP, 7Z, RAR, PDF, PNG, JPG, WEBP, TXT. Maksimal 100 MB per file.</p>
+      <form id="uploadForm">
+        <label class="field-label">Nama file (opsional)<input name="name" placeholder="Nama yang ditampilkan"></label>
+        <label class="field-label">Pilih file<input name="file" type="file" required accept=".zip,.7z,.rar,.pdf,.png,.jpg,.jpeg,.webp,.txt"></label>
+        <button class="primary" type="submit">UPLOAD FILE</button>
+      </form>
+      <button id="logoutBtn" class="secondary">LOGOUT</button>
+    </div>
+    <p id="adminMessage" class="message"></p>
+  </dialog>
+  <script src="/app.js"></script>
+</body></html>
